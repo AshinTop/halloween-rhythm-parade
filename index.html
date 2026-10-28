@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#191a2c"><meta name="description" content="An original Halloween rhythm game. Join four little monsters for three songs, tap in time, and light the midnight parade.">
+  <title>Midnight Rhythm Parade · Halloween</title><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="night"></div>
+  <main class="app">
+    <header class="topbar">
+      <div class="identity"><img src="./icon.svg" width="37" height="37" alt=""><div><p class="eyebrow">MIDNIGHT CANDY CLUB · VOL. II</p><h1 id="title">Rhythm <em>Parade</em></h1></div></div>
+      <div class="top-actions"><button id="help" aria-label="How to play">?</button><button id="sound" aria-label="Sound on">♪</button><button id="language">中文</button></div>
+    </header>
+    <div class="game-layout">
+      <section class="stage" aria-label="Rhythm game">
+        <div class="stage-heading"><label class="sr-only" for="song-select" id="song-label">Song</label><select id="song-select"></select><button id="practice" aria-pressed="false">Practice · 75%</button><span id="state-badge">READY</span></div>
+        <div class="score-strip"><div><span id="score-label">SCORE</span><strong id="score">0</strong></div><div><span id="combo-label">COMBO</span><strong id="combo">0</strong></div><div><span id="accuracy-label">ACCURACY</span><strong id="accuracy">—</strong></div><div class="clock"><strong id="clock">0:00 / 0:48</strong><span id="pace">96 BPM</span></div></div>
+        <div class="playfield" id="playfield">
+          <canvas id="track" aria-label="Four lanes of notes. Tap the matching key when a note meets the gold line."></canvas>
+          <div class="center-message" id="center-message"><span class="tiny-star">✦</span><h2 id="welcome-title">A little monster music.</h2><p id="welcome-copy">Tap when the lanterns reach the line.<br>D &nbsp; F &nbsp; J &nbsp; K — or the four buttons below.</p></div>
+          <div class="judgement" id="judgement" aria-hidden="true"></div><div class="fever" id="fever" hidden>✦ LANTERN FEVER ✦</div>
+          <div class="track-progress"><i id="progress"></i></div>
+        </div>
+        <div class="lanes" id="lanes"></div>
+      </section>
+      <aside class="journal">
+        <div class="journal-top"><span>THE NIGHT’S SETLIST</span><span>✦</span></div><h2 id="journal-title">Four friends.<br>One perfect moment.</h2>
+        <div class="parade-art" id="parade-art" aria-hidden="true"></div>
+        <p id="journal-copy">A pumpkin on percussion. A shy ghost on bells. There’s a place for you in the parade.</p>
+        <div class="song-facts"><div><span id="difficulty-label">ENERGY</span><strong id="difficulty">● ○ ○</strong></div><div><span id="notes-label">LANTERNS</span><strong id="notes-count">68</strong></div></div>
+        <div class="best-record"><span id="best-label">YOUR BEST PERFORMANCE</span><strong id="best">Be the first to light this street.</strong></div>
+        <p class="journal-tip" id="journal-tip">20 notes in a row set the lanterns aglow. Every song plays to the end, so take a breath and find the beat.</p>
+      </aside>
+    </div>
+    <footer class="transport"><button class="primary" id="start">Start the parade <span>↗</span></button><button class="secondary" id="restart">↻ <span>Restart</span></button><div class="footer-hint" id="footer-hint">Three original songs. A little courage.</div><button class="secondary" id="share">↗ <span>Share</span></button><button class="secondary settings-button" id="settings" aria-label="Timing settings">⚙</button></footer>
+  </main>
+  <dialog id="help-dialog"><button class="close" data-close aria-label="Close">×</button><p class="eyebrow">A SMALL GUIDE TO A BIG NIGHT</p><h2 id="help-title">Find your rhythm.</h2><div id="help-copy"></div><button class="primary" data-close id="help-done">Let’s play</button></dialog>
+  <dialog id="settings-dialog"><button class="close" data-close aria-label="Close">×</button><p class="eyebrow">A LITTLE FINE TUNING</p><h2 id="settings-title">Your timing.</h2><p id="settings-copy">If your device sounds late, add a positive audio offset. This shifts note judgement, not the song.</p><label for="offset" id="offset-label">Audio offset</label><div class="offset-control"><input type="range" id="offset" min="-150" max="150" step="5" value="0"><output id="offset-value">0 ms</output></div><p class="fineprint" id="settings-note">For the tightest timing, try wired headphones or your device’s speakers.</p><button class="primary" data-close id="settings-done">Done</button></dialog>
+  <dialog id="result-dialog"><button class="close" data-close aria-label="Close">×</button><p class="eyebrow" id="result-kicker">THE STREET IS YOURS</p><div class="result-grade" id="result-grade">S</div><h2 id="result-title">What a lovely night.</h2><p id="result-song"></p><div class="result-stats" id="result-stats"></div><div class="result-breakdown" id="result-breakdown"></div><p class="fineprint" id="result-practice" hidden></p><div class="dialog-buttons"><button class="secondary" id="play-again">Play again</button><button class="primary" id="next-song">Next song ↗</button></div></dialog>
+  <dialog id="share-dialog"><button class="close" data-close aria-label="Close">×</button><h2 id="share-title">Invite a little company.</h2><p id="share-copy">This link opens the same song and practice setting.</p><input id="share-link" readonly aria-label="Share link"><button class="primary" id="copy-link">Copy link</button></dialog>
+  <div id="toast" role="status" aria-live="polite"></div><span id="screen-status" class="sr-only" role="status" aria-live="polite"></span>
+  <script type="module" src="./app.js"></script>
+</body></html>

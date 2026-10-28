@@ -1,0 +1,8 @@
+{
+  "name": "halloween-rhythm-parade",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An original four-lane Halloween rhythm game with three synthesized songs.",
+  "scripts": {"test": "node --test tests/*.test.js"}
+}
