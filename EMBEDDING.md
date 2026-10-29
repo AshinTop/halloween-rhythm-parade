@@ -8,7 +8,7 @@ Primary integration: `sprunki-game.top`. Its existing desktop player allocates a
 
 ```html
 <iframe
-  src="https://ashintop.github.io/halloween-rhythm-parade/"
+  src="https://halloween-rhythm-parade.crazy3d.org/"
   title="Midnight Rhythm Parade"
   width="1160"
   height="654"
@@ -18,7 +18,7 @@ Primary integration: `sprunki-game.top`. Its existing desktop player allocates a
 ></iframe>
 ```
 
-The URL is the intended GitHub Pages deployment target. Verify deployment before adding it to a production game catalog.
+The example uses the live Cloudflare game URL. Check the final surrounding host layout when adding it to a production game catalog.
 
 The app always uses its iframe's own `100dvh`; it does not depend on reading the parent page or on `postMessage`. `?embed=1` is harmless but not required. It works from a repository subpath because all runtime assets use relative URLs.
 

@@ -6,11 +6,11 @@ Midnight Rhythm Parade is a complete, browser-based Halloween rhythm game with f
 
 Part of **Midnight Candy Club**, created for the Halloween collection at [sprunki-game.top](https://sprunki-game.top).
 
-**[GitHub Pages deployment target](https://ashintop.github.io/halloween-rhythm-parade/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
+**[Play online](https://halloween-rhythm-parade.crazy3d.org/)** · **[Watch the visual introduction](docs/media/intro.mp4)** · **[Embedding guide](EMBEDDING.md)**
 
-**Deployment status:** GitHub Pages is not live yet. The `ashintop.github.io` links in this document are intended deployment addresses. Use the local-run instructions until the hosted game has been published and verified.
+**Live deployment:** Play on Cloudflare using the link above. The site is deployed from this GitHub repository. Hosting scripts and request logging may be added by Cloudflare independently of the game code.
 
-[Video player and transcript (deployment target)](https://ashintop.github.io/halloween-rhythm-parade/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
+[Video player and transcript](https://halloween-rhythm-parade.crazy3d.org/intro.html) · [Captioned MP4 file](docs/media/intro.mp4). The 24-second silent introduction uses actual game screenshots; it is not a live gameplay recording.
 
 ![Midnight Rhythm Parade Halloween rhythm game with four monster lanes, a gold timing line, and score feedback](docs/images/gameplay.jpg)
 
@@ -24,7 +24,7 @@ Part of **Midnight Candy Club**, created for the Halloween collection at [sprunk
 - **Pause and resume**, including automatic pause when the page becomes hidden or audio playback is interrupted.
 - **Timing adjustment from −150 ms to +150 ms** for a more comfortable match between your device’s audio and the visual notes.
 - **English and Simplified Chinese**, local best scores, optional sound, and shareable song links.
-- **No installation, account, external audio files, runtime libraries, or CDN requests.** The game can be hosted as a small static site.
+- **No installation, account, external audio files, runtime libraries, or CDN dependencies in the game source.** The game can be hosted as a small static site.
 
 ### The setlist
 
@@ -95,7 +95,7 @@ Use the four monster buttons as the touch targets and meet the gold timing line.
 The layout fills its actual iframe viewport and keeps gameplay controls available at desktop, portrait-phone, and short-landscape sizes. Designed integration frames include **1160 × 654**, **390 × 650**, **390 × 794**, and **844 × 340** CSS pixels. See [EMBEDDING.md](EMBEDDING.md) for the host contract and verification limits.
 
 ```html
-<iframe src="https://ashintop.github.io/halloween-rhythm-parade/"
+<iframe src="https://halloween-rhythm-parade.crazy3d.org/"
   title="Midnight Rhythm Parade" width="1160" height="654"
   allow="autoplay; fullscreen" allowfullscreen
   style="display:block;width:100%;border:0"></iframe>
@@ -106,7 +106,7 @@ Use a current browser with Canvas 2D, ES modules, and Web Audio. Sound is subjec
 ## Frequently asked questions
 
 **Is this a Sprunki mod?**  
-No. This is an original four-lane rhythm game in the same Halloween collection as [Pumpkin Jam](https://github.com/AshinTop/halloween-sprunki).
+No. This is an original four-lane rhythm game in the same Halloween collection as [Pumpkin Jam](https://halloween-sprunki.crazy3d.org/).
 
 **Can I play on a phone?**  
 Yes. The four bottom buttons support touch, including multi-touch notes. Landscape and portrait layouts are supported.
@@ -123,9 +123,9 @@ Created for Ashin's Midnight Candy Club with AI-assisted game design, programmin
 
 ## More from Midnight Candy Club
 
-- [Pumpkin Jam](https://github.com/AshinTop/halloween-sprunki) — build a Halloween monster band and discover hidden arrangements.
-- [Ghostkeeper Maze 3D](https://github.com/AshinTop/halloween-haunted-maze) — rescue little lantern spirits in first-person moonlit corridors.
-- [Moonlit Mirrors](https://github.com/AshinTop/halloween-mirror-hearts) — guide two ghosts with mirrored movement.
-- [Trick-or-Treat TriPeaks](https://github.com/AshinTop/halloween-tripeaks) — uncover a Halloween card tableau one clever move at a time.
+- [Pumpkin Jam](https://halloween-sprunki.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-sprunki) — build a Halloween monster band and discover hidden arrangements.
+- [Ghostkeeper Maze 3D](https://halloween-haunted-maze.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-haunted-maze) — rescue little lantern spirits in first-person moonlit corridors.
+- [Moonlit Mirrors](https://halloween-mirror-hearts.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-mirror-hearts) — guide two ghosts with mirrored movement.
+- [Trick-or-Treat TriPeaks](https://halloween-tripeaks.crazy3d.org/) · [Source](https://github.com/AshinTop/halloween-tripeaks) — uncover a Halloween card tableau one clever move at a time.
 
 Enjoyed the parade? **[Star this repository](https://github.com/AshinTop/halloween-rhythm-parade)** to support the project and keep it easy to find. Bug reports and clear reproduction steps are welcome through GitHub Issues.
